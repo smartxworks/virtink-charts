@@ -1,0 +1,26 @@
+controller:
+  ports:
+    - port: 443
+      targetPort: 9443
+  serviceAccount:
+    annotations: {}
+  type: ClusterIP
+  virtController:
+    args:
+      - --zap-time-encoding=iso8601
+      - --leader-elect
+    image:
+      repository: smartxworks/virt-controller:v0.15.0@sha256
+      tag: 9f5f9c8d8bc5de2b942cc406c202f4aa70d8aba2e00426b1bd66aad7c684ed6c
+daemon:
+  serviceAccount:
+    annotations: {}
+  virtDaemon:
+    args:
+      - --zap-time-encoding=iso8601
+    containerSecurityContext:
+      privileged: true
+    image:
+      repository: smartxworks/virt-daemon:v0.15.0@sha256
+      tag: 695d5eff64e8d0ac75fa7dea5d170de6c6c65de83eb7fa17811effd38c0d8f59
+kubernetesClusterDomain: cluster.local
