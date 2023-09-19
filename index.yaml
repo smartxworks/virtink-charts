@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  virtink:
+  - apiVersion: v2
+    appVersion: 0.15.0
+    created: "2023-09-19T09:18:34.792191216Z"
+    description: A Helm chart for Kubernetes
+    digest: 027310d5e0fe36bbeaf86e231f9b2f24a48bab1b731b9fd24f9c29ad227fee9c
+    name: virtink
+    type: application
+    urls:
+    - https://github.com/smartxworks/virtink-charts/releases/download/virtink-0.15.0/virtink-0.15.0.tgz
+    version: 0.15.0
+generated: "2023-09-19T09:18:34.792253117Z"
